@@ -1,0 +1,92 @@
+.fi-hero {
+  padding: clamp(4rem, 10vh, 8rem) clamp(1.25rem, 5vw, 2rem);
+  min-height: calc(100svh - 80px);
+  display: flex;
+  align-items: center;
+}
+
+.fih-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 8vw, 7rem);
+  align-items: center;
+  width: 100%;
+}
+
+.fih-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.fih-title {
+  font-size: clamp(2.6rem, 5.5vw, 4rem);
+  font-weight: 900;
+  color: var(--color-primary-navy);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.fih-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 500px;
+  margin: 0;
+}
+
+.fih-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.fih-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+}
+
+.fih-laptop {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  filter: drop-shadow(0 20px 35px rgba(0,0,0,0.4));
+}
+
+.fih-card {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 900px) {
+  .fi-hero {
+    min-height: auto;
+  }
+
+  .fih-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .fih-text {
+    align-items: center;
+  }
+
+  .fih-actions {
+    justify-content: center;
+  }
+
+  .fih-visual {
+    min-height: 280px;
+  }
+}

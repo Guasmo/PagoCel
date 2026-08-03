@@ -1,0 +1,57 @@
+.wp-nobank {
+  background: var(--color-bg-light);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.wpn-container {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.wpn-logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+}
+
+.wpn-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--color-primary-navy);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.wpn-highlight {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--pgc-amber);
+  margin: 0;
+  background: rgba(245, 158, 11, 0.08);
+  padding: 0.6rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--pgc-amber-border);
+}
+
+.wpn-body {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .wp-nobank {
+    padding: 4rem 1.25rem;
+  }
+
+  .wpn-highlight {
+    font-size: 1.1rem;
+  }
+}

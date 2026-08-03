@@ -1,0 +1,41 @@
+<section class="simple-flow">
+  <div class="sf-container">
+    <div class="sf-header">
+      <span class="pgc-eyebrow">Cómo funciona</span>
+      <h2>Una nueva forma de pagar</h2>
+      <p>Todo empieza con tu número de celular.</p>
+    </div>
+
+    <div class="sf-layout">
+      <div class="sf-tabs">
+        @for (tab of tabs; track tab.step) {
+          <button
+            class="sf-tab"
+            [class.sf-tab--active]="activeTab() === tab.step"
+            (click)="selectTab(tab.step)"
+          >
+            <span class="sf-tab-num">{{ tab.step }}</span>
+            <div class="sf-tab-body">
+              <h3>{{ tab.title }}</h3>
+              @if (activeTab() === tab.step) {
+                <p>{{ tab.description }}</p>
+              }
+            </div>
+          </button>
+        }
+      </div>
+
+      <div class="sf-visual">
+        <div class="sf-phone-frame">
+          @if (activeTab() === 1) {
+            <img src="/mockups/mockup-7.png" alt="Víncula tus cuentas" class="sf-mockup">
+          } @else if (activeTab() === 2) {
+            <img src="/mockups/mockup-9.png" alt="Envía o paga" class="sf-mockup">
+          } @else {
+            <img src="/mockups/mockup-8.png" alt="Confirma al instante" class="sf-mockup">
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

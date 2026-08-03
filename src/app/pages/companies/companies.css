@@ -1,0 +1,6 @@
+﻿.page-companies {
+  display: block;
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--color-bg-light);
+}

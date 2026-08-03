@@ -1,0 +1,100 @@
+.fi-capabilities {
+  background: var(--color-bg-light);
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.fic-container {
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+  padding: 0 2rem;
+}
+
+.fic-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fic-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--color-primary-navy);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.fic-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 640px;
+}
+
+/* ── Carrusel infinito ── */
+.fic-carousel {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.fic-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: fic-scroll 30s linear infinite;
+}
+
+.fic-carousel:hover .fic-track {
+  animation-play-state: paused;
+}
+
+@keyframes fic-scroll {
+  to { transform: translateX(-50%); }
+}
+
+.fic-cap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.9rem 1.75rem;
+  transition: border-color 0.3s ease, transform 0.3s var(--pgc-ease-out);
+}
+
+.fic-cap:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+  transform: translateY(-3px);
+}
+
+.fic-cap span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .fi-capabilities { padding: 4rem 0; }
+
+  .fic-container {
+    margin-bottom: 2.5rem;
+    padding: 0 1.25rem;
+  }
+
+  .fic-cap {
+    padding: 0.7rem 1.25rem;
+  }
+
+  .fic-cap span {
+    font-size: 0.85rem;
+  }
+}

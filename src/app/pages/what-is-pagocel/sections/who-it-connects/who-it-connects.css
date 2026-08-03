@@ -1,0 +1,150 @@
+.wp-connects {
+  background: var(--color-bg-alt);
+  padding: 6rem 2rem;
+}
+
+.wpc-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* ── Layout: intro izquierda + items derecha ── */
+.wpc-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: clamp(3rem, 7vw, 6rem);
+  align-items: center;
+}
+
+.wpc-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.wpc-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 900;
+  color: var(--color-primary-navy);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.wpc-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin: 0;
+  max-width: 400px;
+}
+
+.wpc-btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-primary-navy);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.8rem 1.75rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s var(--pgc-spring), opacity 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.wpc-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ── Items a la derecha: 2 columnas de cards ── */
+.wpc-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 2.5rem;
+}
+
+.wpc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.wpc-item-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+.wpc-item-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--color-white);
+}
+
+.wpc-item-icon--amber { background: var(--pgc-amber); }
+.wpc-item-icon--purple { background: #a89fdd; }
+.wpc-item-icon--green { background: #5cb85c; }
+.wpc-item-icon--teal { background: var(--pgc-teal); }
+
+.wpc-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.wpc-item-text h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-primary-navy);
+  margin: 0;
+}
+
+.wpc-item-text p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Panel placeholder: imagen ── */
+.wpc-panels {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.wpc-panels-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .wp-connects { padding: 4rem 1.5rem; }
+
+  .wpc-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .wpc-items {
+    gap: 1.5rem;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .wpc-items {
+    grid-template-columns: 1fr;
+  }
+}

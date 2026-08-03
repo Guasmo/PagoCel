@@ -1,0 +1,97 @@
+.fi-ownapp {
+  background: var(--color-bg-alt);
+  padding: 6rem 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.fio-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 8vw, 6rem);
+  align-items: center;
+}
+
+.fio-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fio-img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.12));
+}
+
+.fio-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.fio-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--color-primary-navy);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.fio-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.fio-actions {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.fio-badge {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.fio-badge:hover {
+  transform: translateY(-3px);
+}
+
+.fio-badge img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .fi-ownapp { padding: 4rem 1.5rem; }
+
+  .fio-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .fio-content {
+    align-items: center;
+  }
+
+  .fio-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .fio-badge img { height: 42px; }
+}

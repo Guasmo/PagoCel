@@ -1,0 +1,20 @@
+﻿<section class="fi-capabilities">
+  <div class="fic-container">
+    <div class="fic-header">
+      <span class="pgc-eyebrow">Capacidades</span>
+      <h2 class="fic-title">Todo lo que necesitas <span class="pgc-accent">integrado</span></h2>
+      <p class="fic-subtitle">PAGOCEL expone un conjunto completo de servicios de pago listos para conectar con tu core bancario: desde pagos móviles y transferencias hasta conciliación, reportería y administración multi-institución, todo mediante una única integración.</p>
+    </div>
+  </div>
+
+  <div class="fic-carousel">
+    <div class="fic-track">
+      @for (cap of capabilities; track cap; let i = $index) {
+        <div class="fic-cap"><span>{{ cap }}</span></div>
+      }
+      @for (cap of capabilities; track cap + '-dup'; let i = $index) {
+        <div class="fic-cap" aria-hidden="true"><span>{{ cap }}</span></div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+<div class="cta-block cta-block--{{ variant }}">
+  <div class="cta-block-content">
+    @if (title) {
+      <h3 class="cta-block-title">{{ title }}</h3>
+    }
+    @if (subtitle) {
+      <p class="cta-block-subtitle">{{ subtitle }}</p>
+    }
+  </div>
+  <div class="cta-block-actions">
+    @switch (variant) {
+      @case ('download') {
+        <a routerLink="/descargar" class="pgc-btn-primary">
+          Descargar App
+          <span class="pgc-btn-icon" aria-hidden="true">
+            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 1v8M3.5 5.5L7 9l3.5-3.5M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+        <a routerLink="/como-funciona" class="pgc-btn-ghost">Conoce cómo funciona</a>
+      }
+      @case ('institutional') {
+        <a routerLink="/contacto" class="pgc-btn-primary">Quiero integrar PAGOCEL</a>
+        <a routerLink="/como-funciona" class="pgc-btn-ghost">Conoce cómo funciona</a>
+      }
+      @default {
+        <a routerLink="/descargar" class="pgc-btn-primary">
+          Descargar App
+          <span class="pgc-btn-icon" aria-hidden="true">
+            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 1v8M3.5 5.5L7 9l3.5-3.5M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+      }
+    }
+  </div>
+</div>

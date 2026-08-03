@@ -1,0 +1,100 @@
+.com-cases {
+  background: var(--color-bg-light);
+  padding: 6rem 2rem;
+}
+
+.comc-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.comc-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.comc-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--color-primary-navy);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.comc-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.comc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.comc-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.3s var(--pgc-ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.comc-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.comc-card-num {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--pgc-amber);
+  opacity: 0.15;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  line-height: 1;
+}
+
+.comc-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary-navy);
+  margin: 0;
+}
+
+.comc-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .comc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .com-cases {
+    padding: 4rem 1.25rem;
+  }
+
+  .comc-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+}

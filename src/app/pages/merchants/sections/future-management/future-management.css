@@ -1,0 +1,110 @@
+.mch-future {
+  background: var(--color-bg-light);
+  padding: 6rem 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.mchf-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+
+.mchf-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mchf-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--color-primary-navy);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.mchf-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  max-width: 500px;
+  margin: 0;
+}
+
+.mchf-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.mchf-item {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.3s var(--pgc-ease-out);
+}
+
+.mchf-item:hover {
+  transform: translateY(-5px);
+}
+
+.mchf-item-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--pgc-teal-dim);
+  border: 1px solid var(--pgc-teal-border);
+  color: var(--pgc-teal);
+}
+
+.mchf-item-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.mchf-item h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-navy);
+  margin: 0;
+}
+
+.mchf-item p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.mchf-cta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .mchf-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .mch-future { padding: 4rem 1.25rem; }
+  .mchf-grid { grid-template-columns: 1fr; max-width: 340px; }
+  .mchf-cta { flex-direction: column; width: 100%; }
+  .mchf-cta a { width: 100%; justify-content: center; }
+}

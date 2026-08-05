@@ -1,5 +1,5 @@
 .com-cases {
-  background: var(--color-bg-light);
+  background: var(--color-background);
   padding: 6rem 2rem;
 }
 
@@ -20,7 +20,7 @@
 .comc-title {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin: 0;
@@ -28,7 +28,7 @@
 
 .comc-subtitle {
   font-size: 1.05rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   margin: 0;
 }
 
@@ -39,8 +39,8 @@
 }
 
 .comc-card {
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-border);
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-disabled);
   border-radius: 16px;
   padding: 2rem 1.5rem;
   display: flex;
@@ -59,7 +59,7 @@
 .comc-card-num {
   font-size: 2.5rem;
   font-weight: 900;
-  color: var(--pgc-amber);
+  color: var(--color-primary);
   opacity: 0.15;
   position: absolute;
   top: 0.5rem;
@@ -70,24 +70,24 @@
 .comc-card h3 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   margin: 0;
 }
 
 .comc-card p {
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   line-height: 1.55;
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .comc-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .com-cases {
     padding: 4rem 1.25rem;
   }

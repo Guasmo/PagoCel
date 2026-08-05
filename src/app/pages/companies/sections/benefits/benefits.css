@@ -1,5 +1,5 @@
 .com-benefits {
-  background: var(--color-bg-alt);
+  background: var(--color-surface-card);
   padding: 6rem 2rem;
 }
 
@@ -20,7 +20,7 @@
 .comb-title {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin: 0;
@@ -33,8 +33,8 @@
 }
 
 .comb-card {
-  background: var(--color-bg-light);
-  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  border: 1px solid var(--color-disabled);
   border-radius: 16px;
   padding: 2rem 1.5rem;
   display: flex;
@@ -55,15 +55,15 @@
   align-items: center;
   justify-content: center;
   border-radius: 14px;
-  background: var(--pgc-teal-dim);
-  border: 1px solid var(--pgc-teal-border);
-  color: var(--pgc-teal);
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
 }
 
 .comb-card-icon--amber {
-  background: var(--pgc-amber-dim);
-  border-color: var(--pgc-amber-border);
-  color: var(--pgc-amber);
+  background: var(--color-surface-card);
+  border-color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .comb-card-icon svg {
@@ -74,13 +74,13 @@
 .comb-card h3 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   margin: 0;
 }
 
 .comb-card p {
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   line-height: 1.6;
   margin: 0;
 }
@@ -91,7 +91,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .com-benefits {
     padding: 4rem 1.25rem;
   }

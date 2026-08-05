@@ -1,106 +1,128 @@
 .ind-accounts {
-  background: var(--color-bg-light);
+  background: var(--color-surface-card);
   padding: 6rem 2rem;
 }
 
 .inda-container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.inda-header {
-  text-align: center;
-  margin-bottom: 4rem;
+/* ── Layout: intro izquierda + items derecha (como "A quién conecta") ── */
+.inda-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: clamp(3rem, 7vw, 6rem);
+  align-items: center;
+}
+
+.inda-intro {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  align-items: flex-start;
+  gap: 1.25rem;
 }
 
 .inda-title {
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 800;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 900;
   color: var(--color-primary-navy);
-  line-height: 1.1;
+  line-height: 1.05;
   letter-spacing: -0.03em;
   margin: 0;
 }
 
 .inda-subtitle {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--color-text-muted);
-  max-width: 600px;
+  line-height: 1.65;
   margin: 0;
+  max-width: 420px;
 }
 
-.inda-grid {
+/* ── Items: 2×2 con íconos de color ── */
+.inda-items {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 2.5rem;
 }
 
 .inda-item {
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
-  padding: 2rem 1.5rem;
-  text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  transition: transform 0.3s var(--pgc-ease-out);
-}
-
-.inda-item:hover {
-  transform: translateY(-4px);
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .inda-item-icon {
-  width: 48px;
-  height: 48px;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
-  background: var(--pgc-teal-dim);
-  border: 1px solid var(--pgc-teal-border);
-  color: var(--pgc-teal);
+  border-radius: 16px;
 }
 
 .inda-item-icon svg {
   width: 24px;
   height: 24px;
+  color: #ffffff;
 }
 
-.inda-item h3 {
+.inda-item-icon--amber {
+  background: var(--pgc-amber);
+}
+
+.inda-item-icon--purple {
+  background: #a89fdd;
+}
+
+.inda-item-icon--green {
+  background: #5cb85c;
+}
+
+.inda-item-icon--teal {
+  background: var(--pgc-teal);
+}
+
+.inda-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.inda-item-text h3 {
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-primary-navy);
   margin: 0;
 }
 
-.inda-item p {
-  font-size: 0.9rem;
+.inda-item-text p {
+  font-size: 0.85rem;
   color: var(--color-text-muted);
-  line-height: 1.5;
+  line-height: 1.55;
   margin: 0;
 }
 
-@media (max-width: 768px) {
-  .inda-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .ind-accounts {
+    padding: 4rem 1.5rem;
+  }
+
+  .inda-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .inda-items {
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 500px) {
-  .ind-accounts {
-    padding: 4rem 1.25rem;
-  }
-
-  .inda-grid {
+  .inda-items {
     grid-template-columns: 1fr;
-    max-width: 300px;
-    margin: 0 auto;
   }
 }

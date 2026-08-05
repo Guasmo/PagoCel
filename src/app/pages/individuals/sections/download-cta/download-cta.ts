@@ -1,10 +1,10 @@
 ﻿import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { DownloadSection } from '../../../../components/download-section/download-section';
 
 @Component({
   selector: 'app-download-cta',
-  imports: [RouterLink],
+  imports: [DownloadSection],
   templateUrl: './download-cta.html',
   styleUrl: './download-cta.css'
 })
-export class DownloadCta {}
+export class DownloadCta { }

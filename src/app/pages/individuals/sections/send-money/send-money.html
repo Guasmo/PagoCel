@@ -1,27 +1,27 @@
-﻿<section class="ind-send">
-  <div class="inds-container">
-    <div class="inds-text">
-      <span class="pgc-eyebrow">Funcionalidad</span>
-      <h2 class="inds-title">Envía <span class="pgc-accent">dinero</span></h2>
-      <p class="inds-subtitle">Selecciona un contacto de tu agenda, ingresa el monto, elige desde cuál de tus cuentas vinculadas quieres pagar y confirma. El dinero se transfiere de inmediato.</p>
-      <ul class="inds-list">
-        <li>Usa el número celular del destinatario</li>
-        <li>Selecciona la cuenta de origen</li>
-        <li>Confirma con un solo toque</li>
-      </ul>
-    </div>
-    <div class="inds-visual">
-      <img src="/mockups/mockup-9.png" alt="Enviar dinero con PAGOCEL" class="inds-mockup">
-      <div class="inds-card pgc-fcard pgc-fcard--mono">
-        <div class="pgc-fcard-row">
-          <span class="pgc-fcard-icon pgc-fcard-icon--amber">
-            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v8M3.5 5.5L7 9l3.5-3.5M2 11h10"/></svg>
-          </span>
-          <span class="pgc-fcard-label">Pago móvil</span>
-        </div>
-        <p class="pgc-fcard-val pgc-fcard-val--amber">$25.00</p>
-        <p class="pgc-fcard-sub">Transferencia inmediata</p>
+<section class="ind-send">
+  <div class="inds-slider">
+    <div class="inds-intro">
+      <h2 class="inds-title">Funciones <br>clave de <br>PAGOCEL</h2>
+      <div class="inds-intro-image">
+        <img src="/loreimpsun.jpg" alt="Funcionalidades PAGOCEL">
       </div>
+      <p class="inds-subtitle">Lorem ipsum dolor sit amet elit, consectetur adipiscing elit cursus imperdiet elementum
+        Quam aliquam. Quam vel aliquam sit vulputate.</p>
     </div>
+
+    @for (card of cards; track card.num) {
+    <article class="inds-card">
+      <h3 class="inds-card-header">{{ card.title }}</h3>
+      <div class="inds-card-img">
+        <img [src]="card.img" [alt]="card.title">
+      </div>
+      <div class="inds-card-body">
+        <span class="inds-num">{{ card.num }}</span>
+        <div class="inds-card-text">
+          <p>{{ card.description }}</p>
+        </div>
+      </div>
+    </article>
+    }
   </div>
 </section>

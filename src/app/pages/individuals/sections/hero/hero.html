@@ -1,22 +1,123 @@
-﻿<section class="ind-hero">
-  <div class="indh-container">
-    <div class="indh-text">
-      <span class="pgc-eyebrow">Personas</span>
-      <h1 class="indh-title">Tu dinero. Tus cuentas. <span class="pgc-accent">Tu celular.</span></h1>
-      <p class="indh-subtitle">PAGOCEL simplifica tus pagos cotidianos. Envía dinero, recibe pagos y conecta tus cuentas desde una sola app.</p>
-      <div class="indh-actions">
-        <a routerLink="/descargar" class="pgc-btn-primary">
-          Descargar App
-          <span class="pgc-btn-icon" aria-hidden="true">
-            <svg viewBox="0 0 14 14" fill="none"><path d="M7 1v8M3.5 5.5L7 9l3.5-3.5M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </a>
-        <a routerLink="/como-funciona" class="pgc-btn-ghost">Cómo funciona</a>
+<section class="ind-hero">
+  <div class="indh-main-container">
+    
+    <!-- Hero Main Grid: Text + Mockups -->
+    <div class="indh-hero-grid">
+      
+      <!-- Text content (Left) -->
+      <div class="indh-text">
+        <span class="pgc-eyebrow">
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="6"/><path d="M7 4v4M7 10h.01"/></svg>
+          PERSONAS
+        </span>
+        
+        <h1 class="indh-title">Tu dinero. Tus cuentas. <span class="pgc-accent">Tu celular.</span></h1>
+        
+        <p class="indh-subtitle">
+          PAGOCEL simplifica tus pagos cotidianos. Envía dinero, recibe pagos y conecta tus cuentas desde una sola app.
+        </p>
+        
+        <div class="indh-actions">
+          <button type="button" routerLink="/descargar" class="pgc-btn-primary">
+            <span class="pgc-btn-icon" aria-hidden="true">
+              <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1v8M3.5 5.5L7 9l3.5-3.5M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Descargar App
+          </button>
+          <button type="button" routerLink="/como-funciona" class="pgc-btn-ghost">
+            <span class="indh-play-icon" aria-hidden="true">
+              <svg viewBox="0 0 14 14" fill="currentColor"><path d="M4.5 2.5l7 4.5-7 4.5v-9z"/></svg>
+            </span>
+            Cómo funciona
+          </button>
+        </div>
+
+        <div class="indh-social-proof">
+          <div class="indh-avatars">
+            <div class="indh-avatar-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="indh-avatar-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="indh-avatar-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="indh-avatar-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+          </div>
+          <span class="indh-social-text">+250K personas usan PAGOCEL</span>
+        </div>
+      </div>
+
+      <!-- Mockups Showcase (Right) -->
+      <div class="indh-visual">
+        <!-- Glow Aura Background -->
+        <div class="indh-glow"></div>
+
+        <!-- SVG Dot Patterns -->
+        <img src="/icons/dots-grid.svg" alt="" class="indh-dots indh-dots-top-right" aria-hidden="true">
+        <img src="/icons/dots-grid.svg" alt="" class="indh-dots indh-dots-bottom-left" aria-hidden="true">
+
+        <!-- 3 Overlapping Mockups -->
+        <div class="indh-mockups-wrapper">
+          <img src="/mockups/mockup-7.png" alt="PAGOCEL Pago con QR" class="indh-phone indh-phone-left">
+          <img src="/mockups/mockup-9.png" alt="PAGOCEL App Principal" class="indh-phone indh-phone-center">
+          <img src="/mockups/mockup-8.png" alt="PAGOCEL Transferencia" class="indh-phone indh-phone-right">
+        </div>
+
+        <!-- Floor Shadow -->
+        <div class="indh-floor-shadow"></div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Features Cards Bar -->
+    <div class="indh-features-bar">
+      <div class="indh-feature-item">
+        <div class="indh-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </div>
+        <div class="indh-feature-content">
+          <span class="indh-feature-num">01</span>
+          <h3 class="indh-feature-title">Envía dinero</h3>
+          <p class="indh-feature-desc">Transfiere a cualquier número de celular sin importar el banco.</p>
+        </div>
+      </div>
+
+      <div class="indh-feature-item">
+        <div class="indh-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+        </div>
+        <div class="indh-feature-content">
+          <span class="indh-feature-num">02</span>
+          <h3 class="indh-feature-title">Paga con QR</h3>
+          <p class="indh-feature-desc">Escanea y paga en comercios de forma rápida y segura.</p>
+        </div>
+      </div>
+
+      <div class="indh-feature-item">
+        <div class="indh-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21h18M3 10h18M5 10v11M19 10v11M9 10v11M15 10v11M12 3L2 10h20L12 3z"></path>
+          </svg>
+        </div>
+        <div class="indh-feature-content">
+          <span class="indh-feature-num">03</span>
+          <h3 class="indh-feature-title">Todas tus cuentas</h3>
+          <p class="indh-feature-desc">Visualiza y gestiona todas tus cuentas bancarias en un solo lugar.</p>
+        </div>
       </div>
     </div>
-    <div class="indh-visual">
-      <img src="/mockups/mockup-8.png" alt="PAGOCEL enviar dinero" class="indh-mockup indh-mockup--back">
-      <img src="/mockups/mockup-9.png" alt="PAGOCEL confirmar pago" class="indh-mockup indh-mockup--front">
-    </div>
+
   </div>
 </section>

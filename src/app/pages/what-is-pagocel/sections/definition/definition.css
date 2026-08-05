@@ -1,80 +1,231 @@
 .wp-definition {
-  padding: clamp(4rem, 10vh, 8rem) clamp(1.25rem, 5vw, 2rem);
-  min-height: calc(100svh - 80px);
-  display: flex;
-  align-items: center;
+  padding: clamp(1.5rem, 3vh, 3rem) clamp(1.25rem, 5vw, 2rem) 3rem;
+  background-color: #f7f8fc;
+  overflow: hidden;
 }
 
-.wpd-container {
-  max-width: 1200px;
+.wpd-main-container {
+  max-width: var(--section-max-width-wide);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(3rem, 8vw, 8rem);
-  align-items: center;
   width: 100%;
 }
 
+/* ── HERO MAIN GRID ── */
+.wpd-hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2rem, 3vw, 3rem);
+  align-items: center;
+}
+
+/* ── IMAGE PLACEHOLDER (Left) ── */
+.wpd-image-side {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.wpd-ecosystem-image {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  border-radius: 24px;
+  object-fit: contain;
+  transform: scale(1.15);
+  transform-origin: center;
+}
+
+/* ── TEXT CONTENT (Right) ── */
 .wpd-text {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
   align-items: flex-start;
 }
 
 .wpd-title {
-  font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
   font-weight: 900;
-  color: var(--color-primary-navy);
-  line-height: 1.05;
+  color: var(--color-text-primary);
+  line-height: 1.08;
   letter-spacing: -0.04em;
   margin: 0;
 }
 
 .wpd-subtitle {
-  font-size: 1.1rem;
-  color: var(--color-text-muted);
-  line-height: 1.7;
-  max-width: 500px;
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  max-width: 520px;
   margin: 0;
 }
 
-.wpd-actions {
+/* ── FEATURE LIST ── */
+.wpd-feature-list {
   display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 0.5rem;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 0.25rem;
+  width: 100%;
 }
 
-.wpd-visual {
-  position: relative;
+.wpd-feature-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.wpd-feature-row-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: var(--color-primary, #049399);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 420px;
+  flex-shrink: 0;
+  border: 2px solid rgba(4, 147, 153, 0.15);
 }
 
-.wpd-mockup {
-  width: auto;
-  height: clamp(260px, 42svh, 440px);
-  filter: drop-shadow(0 25px 40px rgba(0,0,0,0.4));
-  border-radius: 32px;
+.wpd-feature-row-icon svg {
+  width: 20px;
+  height: 20px;
 }
 
-.wpd-card {
-  position: absolute;
-  bottom: 8%;
-  right: 5%;
+.wpd-feature-svg {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
-@media (max-width: 900px) {
-  .wp-definition {
-    padding: 4rem 1.5rem;
-    min-height: auto;
-  }
+.wpd-feature-row-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
 
-  .wpd-container {
+.wpd-feature-row-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.wpd-feature-row-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── BENEFITS SECTION ── */
+.wpd-benefits {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.wpd-benefits-eyebrow {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+}
+
+.wpd-benefits-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 900;
+  color: var(--color-text-primary);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin: 0 0 2rem 0;
+}
+
+.wpd-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ── BENEFIT CARD ── */
+.wpd-benefit-card {
+  background: #ffffff;
+  border: 1px solid var(--color-disabled, #e4eaed);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(15, 34, 63, 0.05);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: transform 0.35s var(--pgc-ease-out, ease-out), box-shadow 0.35s ease;
+}
+
+.wpd-benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(15, 34, 63, 0.09);
+}
+
+.wpd-benefit-image-placeholder {
+  width: 38%;
+  min-height: 140px;
+  flex-shrink: 0;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin: 1rem 0 1rem 1rem;
+}
+
+.wpd-shared {
+  max-width: 140px;
+}
+
+.wpd-benefit-content {
+  padding: 1.5rem 1.25rem 1.5rem 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.wpd-benefit-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.wpd-benefit-card-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.wpd-benefit-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary, #049399);
+  text-decoration: none;
+  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.wpd-benefit-link:hover {
+  color: var(--color-primary-hover, #037a7e);
+  gap: 0.5rem;
+}
+
+/* ── RESPONSIVE MEDIA QUERIES ── */
+@media (max-width: 1024px) {
+  .wpd-hero {
     grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
@@ -85,18 +236,59 @@
   }
 
   .wpd-subtitle {
+    max-width: 600px;
+  }
+
+  .wpd-ecosystem-image {
+    max-width: 420px;
+  }
+
+  .wpd-feature-list {
+    align-items: center;
+  }
+
+  .wpd-feature-row {
+    text-align: left;
+    max-width: 420px;
+  }
+
+  .wpd-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .wp-definition {
+    padding: 2.5rem 1rem 3rem;
+  }
+
+  .wpd-ecosystem-image {
     max-width: 100%;
+    border-radius: 18px;
   }
 
-  .wpd-actions {
-    justify-content: center;
+  .wpd-benefits {
+    margin-top: 3.5rem;
   }
 
-  .wpd-visual {
-    min-height: 320px;
+  .wpd-benefit-card {
+    border-radius: 16px;
+    flex-direction: column;
   }
 
-  .wpd-mockup {
-    height: clamp(220px, 55svh, 340px);
+  .wpd-benefit-image-placeholder {
+    width: 100%;
+    margin: 0;
+    border-radius: 16px 16px 0 0;
+    min-height: 200px;
+  }
+
+  .wpd-benefit-content {
+    padding: 1.5rem;
+    align-items: center;
+    text-align: center;
   }
 }

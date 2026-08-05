@@ -1,5 +1,5 @@
 .wp-connects {
-  background: var(--color-bg-alt);
+  background: var(--color-surface-card);
   padding: 6rem 2rem;
 }
 
@@ -29,7 +29,7 @@
 .wpc-title {
   font-size: clamp(2.4rem, 4.5vw, 3.6rem);
   font-weight: 900;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   line-height: 1.05;
   letter-spacing: -0.03em;
   margin: 0;
@@ -37,7 +37,7 @@
 
 .wpc-subtitle {
   font-size: 1rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   line-height: 1.65;
   margin: 0;
   max-width: 400px;
@@ -46,13 +46,17 @@
 .wpc-btn {
   display: inline-flex;
   align-items: center;
-  background: var(--color-primary-navy);
-  color: var(--color-white);
+  background: var(--color-text-primary);
+  color: var(--color-text-contrast);
   font-weight: 700;
   font-size: 0.92rem;
   padding: 0.8rem 1.75rem;
   border-radius: 999px;
   text-decoration: none;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  font-family: inherit;
   transition: transform 0.2s var(--pgc-spring), opacity 0.2s ease;
   margin-top: 0.5rem;
 }
@@ -88,13 +92,13 @@
 .wpc-item-icon svg {
   width: 24px;
   height: 24px;
-  color: var(--color-white);
+  color: var(--color-text-contrast);
 }
 
-.wpc-item-icon--amber { background: var(--pgc-amber); }
+.wpc-item-icon--amber { background: var(--color-primary); }
 .wpc-item-icon--purple { background: #a89fdd; }
 .wpc-item-icon--green { background: #5cb85c; }
-.wpc-item-icon--teal { background: var(--pgc-teal); }
+.wpc-item-icon--teal { background: var(--color-secondary); }
 
 .wpc-item-text {
   display: flex;
@@ -105,13 +109,13 @@
 .wpc-item-text h3 {
   font-size: 1.05rem;
   font-weight: 800;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   margin: 0;
 }
 
 .wpc-item-text p {
   font-size: 0.85rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   line-height: 1.55;
   margin: 0;
 }
@@ -143,7 +147,7 @@
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .wpc-items {
     grid-template-columns: 1fr;
   }

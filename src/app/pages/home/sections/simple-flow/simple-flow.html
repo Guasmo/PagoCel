@@ -17,9 +17,9 @@
             <span class="sf-tab-num">{{ tab.step }}</span>
             <div class="sf-tab-body">
               <h3>{{ tab.title }}</h3>
-              @if (activeTab() === tab.step) {
+              <div class="sf-tab-desc-wrapper" [class.sf-tab-desc-wrapper--active]="activeTab() === tab.step">
                 <p>{{ tab.description }}</p>
-              }
+              </div>
             </div>
           </button>
         }
@@ -27,13 +27,9 @@
 
       <div class="sf-visual">
         <div class="sf-phone-frame">
-          @if (activeTab() === 1) {
-            <img src="/mockups/mockup-7.png" alt="Víncula tus cuentas" class="sf-mockup">
-          } @else if (activeTab() === 2) {
-            <img src="/mockups/mockup-9.png" alt="Envía o paga" class="sf-mockup">
-          } @else {
-            <img src="/mockups/mockup-8.png" alt="Confirma al instante" class="sf-mockup">
-          }
+          <img src="/mockups/mockup-7.png" alt="Víncula tus cuentas" class="sf-mockup" [class.sf-mockup--active]="activeTab() === 1">
+          <img src="/mockups/mockup-9.png" alt="Envía o paga" class="sf-mockup" [class.sf-mockup--active]="activeTab() === 2">
+          <img src="/mockups/mockup-8.png" alt="Confirma al instante" class="sf-mockup" [class.sf-mockup--active]="activeTab() === 3">
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 .all-in-one {
-  background-color: var(--color-bg-alt);
+  background-color: var(--color-surface-card);
   padding: 6rem 0;
 }
 
@@ -17,14 +17,14 @@
 .aio-header h2 {
   font-size: 3.5rem;
   font-weight: 900;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   letter-spacing: -0.03em;
   margin-bottom: 1rem;
 }
 
 .aio-header p {
   font-size: 1.1rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -38,7 +38,8 @@
 /* Card styles reflecting the reference image.
    overflow visible + margin-top: el mockup sobresale por encima de la card */
 .aio-card {
-  background: #fdfdf9; /* Slightly off-white/warm like the reference */
+  background: #fdfdf9;
+  /* Slightly off-white/warm like the reference */
   border-radius: 16px;
   overflow: visible;
   position: relative;
@@ -49,7 +50,8 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding-bottom: 2rem;
-  margin-top: 90px; /* espacio para la parte del mockup que sale de la card */
+  margin-top: 90px;
+  /* espacio para la parte del mockup que sale de la card */
 }
 
 .aio-card:hover {
@@ -60,7 +62,7 @@
 /* The colored top block inside the card */
 .aio-card-top {
   width: 100%;
-  height: 140px;
+  height: 50px;
   position: absolute;
   top: 0;
   left: 0;
@@ -68,10 +70,21 @@
   border-radius: 16px 16px 0 0;
 }
 
-.aio-bg-orange { background-color: #ff5a00; }
-.aio-bg-purple { background-color: #a89fdd; }
-.aio-bg-dark { background-color: #2a2a2a; }
-.aio-bg-teal { background-color: var(--pgc-teal); }
+.aio-bg-orange {
+  background-color: #ff5a00;
+}
+
+.aio-bg-purple {
+  background-color: #a89fdd;
+}
+
+.aio-bg-dark {
+  background-color: #2a2a2a;
+}
+
+.aio-bg-teal {
+  background-color: var(--color-secondary);
+}
 
 /* The overlapping mockup: sale por encima del borde superior de la card
    y se monta sobre la banda de color, como en la referencia */
@@ -79,7 +92,7 @@
   position: relative;
   z-index: 2;
   margin-top: -80px;
-  height: 320px;
+  height: 420px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -89,7 +102,7 @@
   height: 100%;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15));
   transition: transform 0.3s var(--pgc-spring);
 }
 
@@ -107,14 +120,14 @@
 .aio-card-content h3 {
   font-size: 1.5rem;
   font-weight: 900;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
 }
 
 .aio-card-content p {
   font-size: 0.85rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   line-height: 1.5;
   margin: 0;
 }
@@ -147,14 +160,18 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 1rem;
-    margin-inline: -1.5rem; /* full-bleed respetando el padding del contenedor */
-    padding: 1rem 1.5rem 2rem; /* aire para sombras y el hover */
-    scrollbar-width: none; /* Firefox */
+    margin-inline: -1.5rem;
+    /* full-bleed respetando el padding del contenedor */
+    padding: 1rem 1.5rem 2rem;
+    /* aire para sombras y el hover */
+    scrollbar-width: none;
+    /* Firefox */
     -webkit-overflow-scrolling: touch;
   }
 
   .aio-grid::-webkit-scrollbar {
-    display: none; /* Chrome / Safari */
+    display: none;
+    /* Chrome / Safari */
   }
 
   .aio-card {

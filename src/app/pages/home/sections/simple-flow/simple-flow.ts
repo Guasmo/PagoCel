@@ -1,4 +1,5 @@
-﻿import { Component, signal } from '@angular/core';
+import { Component, signal, OnInit, OnDestroy, PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 interface Tab {
   step: number;
@@ -11,8 +12,11 @@ interface Tab {
   templateUrl: './simple-flow.html',
   styleUrl: './simple-flow.css'
 })
-export class SimpleFlow {
+export class SimpleFlow implements OnInit, OnDestroy {
   activeTab = signal(1);
+  private intervalId: any;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   tabs: Tab[] = [
     {
@@ -32,7 +36,31 @@ export class SimpleFlow {
     }
   ];
 
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.startInterval();
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+  }
+
+  private startInterval() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+    this.intervalId = setInterval(() => {
+      this.activeTab.set(this.activeTab() === 3 ? 1 : this.activeTab() + 1);
+    }, 5000);
+  }
+
   selectTab(step: number): void {
     this.activeTab.set(step);
+    if (isPlatformBrowser(this.platformId)) {
+      this.startInterval();
+    }
   }
 }

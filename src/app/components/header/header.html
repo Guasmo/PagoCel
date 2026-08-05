@@ -26,7 +26,7 @@
     </div>
   </nav>
 
-  <a routerLink="/descargar" class="header-cta">Descargar App</a>
+  <button type="button" routerLink="/descargar" class="header-cta">Descargar App</button>
 
   <button class="header-burger" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Abrir menú">
     <span></span><span></span><span></span>
@@ -53,6 +53,6 @@
     <a routerLink="/ayuda" routerLinkActive="active" (click)="closeMenu()">Ayuda</a>
   </div>
   <div class="menu-modal-footer">
-    <a routerLink="/descargar" class="menu-cta" (click)="closeMenu()">Descargar App</a>
+    <button type="button" routerLink="/descargar" class="menu-cta" (click)="closeMenu()">Descargar App</button>
   </div>
 </nav>

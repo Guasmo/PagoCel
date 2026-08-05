@@ -1,6 +1,6 @@
 /* CTA Button */
 .cta-btn {
-    background-color: var(--pgc-amber);
+    background-color: var(--color-primary);
     color: #17140d;
     border: none;
     padding: 0.6rem 1.2rem;
@@ -16,7 +16,7 @@
 .cta-btn:hover {
     transform: translateY(-2px) scale(1.02);
     box-shadow: 0 8px 16px rgba(245, 158, 11, 0.25);
-    background-color: var(--pgc-amber-hover);
+    background-color: var(--color-primary-dark);
 }
 
 @media (max-width: 1024px) {

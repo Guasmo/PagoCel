@@ -1,5 +1,5 @@
 .mch-static {
-  background: var(--color-bg-alt);
+  background: var(--color-surface-card);
   padding: 6rem 2rem;
 }
 
@@ -21,7 +21,7 @@
 .mchs-title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin: 0;
@@ -29,7 +29,7 @@
 
 .mchs-subtitle {
   font-size: 1.05rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   line-height: 1.7;
   margin: 0;
 }
@@ -47,7 +47,7 @@
   padding-left: 1.5rem;
   position: relative;
   font-size: 0.95rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   line-height: 1.5;
 }
 
@@ -59,7 +59,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--pgc-amber);
+  background: var(--color-primary);
 }
 
 .mchs-visual {
@@ -79,7 +79,7 @@
   height: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .mch-static { padding: 4rem 1.5rem; }
   .mchs-container { grid-template-columns: 1fr; gap: 3rem; }
   .mchs-visual { order: -1; }

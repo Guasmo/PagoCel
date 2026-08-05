@@ -1,5 +1,5 @@
 .mch-ideal {
-  background: var(--color-bg-alt);
+  background: var(--color-surface-card);
   padding: 6rem 2rem;
 }
 
@@ -20,7 +20,7 @@
 .mchi-title {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin: 0;
@@ -33,8 +33,8 @@
 }
 
 .mchi-card {
-  background: var(--color-bg-light);
-  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  border: 1px solid var(--color-disabled);
   border-radius: 14px;
   padding: 1.5rem 1rem;
   display: flex;
@@ -42,18 +42,18 @@
   align-items: center;
   gap: 0.75rem;
   transition: transform 0.3s var(--pgc-ease-out), border-color 0.3s;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
 }
 
 .mchi-card:hover {
   transform: translateY(-4px);
-  border-color: var(--pgc-amber-border);
+  border-color: var(--color-secondary);
 }
 
 .mchi-card svg {
   width: 28px;
   height: 28px;
-  color: var(--pgc-teal);
+  color: var(--color-secondary);
 }
 
 .mchi-card span {
@@ -61,8 +61,8 @@
   font-weight: 600;
 }
 
-@media (max-width: 768px) { .mchi-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 500px) {
+@media (max-width: 900px) { .mchi-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) {
   .mch-ideal { padding: 4rem 1.25rem; }
   .mchi-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
   .mchi-card { padding: 1.25rem 0.75rem; }

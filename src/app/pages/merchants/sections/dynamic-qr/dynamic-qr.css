@@ -1,5 +1,5 @@
 .mch-dynamic {
-  background: var(--color-bg-light);
+  background: var(--color-background);
   padding: 6rem 2rem;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .mchd-mockup {
-  height: clamp(280px, 44svh, 460px);
+  height: clamp(280px, 44dvh, 460px);
   width: auto;
   filter: drop-shadow(0 20px 35px rgba(0,0,0,0.35));
   border-radius: 28px;
@@ -34,7 +34,7 @@
 .mchd-title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin: 0;
@@ -42,7 +42,7 @@
 
 .mchd-subtitle {
   font-size: 1.05rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   line-height: 1.7;
   margin: 0;
 }
@@ -58,7 +58,7 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
 }
 
 .mchd-step-num {
@@ -68,14 +68,14 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: var(--pgc-amber-dim);
-  border: 1px solid var(--pgc-amber-border);
-  color: var(--pgc-amber);
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-primary);
   font-weight: 700;
   font-size: 0.85rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .mch-dynamic { padding: 4rem 1.5rem; }
   .mchd-container { grid-template-columns: 1fr; gap: 3rem; }
   .mchd-flow { justify-content: center; flex-wrap: wrap; }

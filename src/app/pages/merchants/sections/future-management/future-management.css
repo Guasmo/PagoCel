@@ -1,7 +1,7 @@
 .mch-future {
-  background: var(--color-bg-light);
+  background: var(--color-background);
   padding: 6rem 2rem;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-disabled);
 }
 
 .mchf-container {
@@ -24,7 +24,7 @@
 .mchf-title {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin: 0;
@@ -32,8 +32,8 @@
 
 .mchf-subtitle {
   font-size: 1.05rem;
-  color: var(--color-text-muted);
-  max-width: 500px;
+  color: var(--color-text-secondary);
+  max-width: 600px;
   margin: 0;
 }
 
@@ -45,8 +45,8 @@
 }
 
 .mchf-item {
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-border);
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-disabled);
   border-radius: 16px;
   padding: 1.75rem 1.25rem;
   display: flex;
@@ -66,9 +66,9 @@
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  background: var(--pgc-teal-dim);
-  border: 1px solid var(--pgc-teal-border);
-  color: var(--pgc-teal);
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
 }
 
 .mchf-item-icon svg {
@@ -79,13 +79,13 @@
 .mchf-item h3 {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   margin: 0;
 }
 
 .mchf-item p {
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   line-height: 1.55;
   margin: 0;
 }
@@ -98,11 +98,11 @@
   justify-content: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .mchf-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .mch-future { padding: 4rem 1.25rem; }
   .mchf-grid { grid-template-columns: 1fr; max-width: 340px; }
   .mchf-cta { flex-direction: column; width: 100%; }

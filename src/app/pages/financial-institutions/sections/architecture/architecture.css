@@ -1,5 +1,5 @@
 .fi-arch {
-  background: var(--color-bg-alt);
+  background: var(--color-surface-card);
   padding: 6rem 2rem;
 }
 
@@ -20,7 +20,7 @@
 .fiar-title {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin: 0;
@@ -44,14 +44,14 @@
 
 .fiar-node--core {
   background: rgba(245, 158, 11, 0.08);
-  border: 1px solid var(--pgc-amber-border);
-  color: var(--pgc-amber);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .fiar-node--pagocel {
   background: rgba(0, 180, 216, 0.08);
-  border: 1px solid var(--pgc-teal-border);
-  color: var(--pgc-teal);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
 }
 
 .fiar-node-label {
@@ -67,7 +67,7 @@
 .fiar-line-label {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--pgc-amber);
+  color: var(--color-primary);
   letter-spacing: 0.1em;
 }
 
@@ -94,8 +94,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1.25rem 1rem;
-  background: var(--color-bg-light);
-  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  border: 1px solid var(--color-disabled);
   border-radius: 14px;
 }
 
@@ -105,7 +105,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
 }
 
 .fiar-output-icon svg {
@@ -116,7 +116,7 @@
 .fiar-output span {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   letter-spacing: 0.05em;
 }
 

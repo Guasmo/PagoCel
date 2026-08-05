@@ -1,6 +1,6 @@
 .fi-hero {
   padding: clamp(4rem, 10vh, 8rem) clamp(1.25rem, 5vw, 2rem);
-  min-height: calc(100svh - 80px);
+  min-height: calc(100dvh - 80px);
   display: flex;
   align-items: center;
 }
@@ -25,7 +25,7 @@
 .fih-title {
   font-size: clamp(2.6rem, 5.5vw, 4rem);
   font-weight: 900;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   line-height: 1.05;
   letter-spacing: -0.04em;
   margin: 0;
@@ -33,9 +33,9 @@
 
 .fih-subtitle {
   font-size: 1.1rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   line-height: 1.7;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0;
 }
 

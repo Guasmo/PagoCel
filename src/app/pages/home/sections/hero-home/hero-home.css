@@ -125,9 +125,10 @@
   font-size: 1rem;
   font-weight: 700;
   color: #1c1c1c;
-  background: transparent;
   padding: 0;
   letter-spacing: 0.05em;
+  background: none;
+  border: none;
 }
 
 .stars {

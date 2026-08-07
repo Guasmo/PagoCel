@@ -10,7 +10,7 @@
 
 .comc-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,64 +26,92 @@
   margin: 0;
 }
 
-.comc-subtitle {
-  font-size: 1.05rem;
-  color: var(--color-text-secondary);
-  margin: 0;
-}
-
 .comc-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.5rem;
 }
 
 .comc-card {
-  background: var(--color-surface-card);
-  border: 1px solid var(--color-disabled);
-  border-radius: 16px;
-  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  transition: transform 0.3s var(--pgc-ease-out);
-  position: relative;
-  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  gap: 0.85rem;
 }
 
-.comc-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(245, 158, 11, 0.3);
+.comc-card-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(5, 174, 181, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s var(--pgc-ease-out), background 0.3s ease;
 }
 
-.comc-card-num {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: var(--color-primary);
-  opacity: 0.15;
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  line-height: 1;
+.comc-card:hover .comc-card-icon {
+  transform: translateY(-4px);
+  background: rgba(5, 174, 181, 0.2);
+}
+
+/* ── Icon (masked so it always inherits the design system teal) ── */
+.comc-icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-color: var(--color-primary);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.comc-icon--shop {
+  -webkit-mask-image: url('/shop-2-svgrepo-com.svg');
+  mask-image: url('/shop-2-svgrepo-com.svg');
+}
+
+.comc-icon--utensils {
+  -webkit-mask-image: url('/utensils-svgrepo-com.svg');
+  mask-image: url('/utensils-svgrepo-com.svg');
+}
+
+.comc-icon--medicine {
+  -webkit-mask-image: url('/medicine-symbol-svgrepo-com.svg');
+  mask-image: url('/medicine-symbol-svgrepo-com.svg');
+}
+
+.comc-icon--cart {
+  -webkit-mask-image: url('/cart-shopping-svgrepo-com.svg');
+  mask-image: url('/cart-shopping-svgrepo-com.svg');
+}
+
+.comc-icon--portfolio {
+  -webkit-mask-image: url('/portfolio-svgrepo-com.svg');
+  mask-image: url('/portfolio-svgrepo-com.svg');
+}
+
+.comc-icon--delivery {
+  -webkit-mask-image: url('/motorbike-motorcycle-scooter-svgrepo-com.svg');
+  mask-image: url('/motorbike-motorcycle-scooter-svgrepo-com.svg');
 }
 
 .comc-card h3 {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--color-text-primary);
-  margin: 0;
-}
-
-.comc-card p {
-  font-size: 0.9rem;
-  color: var(--color-text-secondary);
-  line-height: 1.55;
+  line-height: 1.3;
   margin: 0;
 }
 
 @media (max-width: 900px) {
   .comc-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2.5rem;
   }
 }
 
@@ -93,8 +121,12 @@
   }
 
   .comc-grid {
-    grid-template-columns: 1fr;
-    max-width: 340px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .comc-card-icon {
+    width: 60px;
+    height: 60px;
   }
 }

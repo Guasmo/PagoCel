@@ -70,7 +70,7 @@
 }
 
 .inda-item-icon--amber {
-  background: var(--pgc-amber);
+  background: var(--color-primary);
 }
 
 .inda-item-icon--purple {
@@ -82,7 +82,7 @@
 }
 
 .inda-item-icon--teal {
-  background: var(--pgc-teal);
+  background: var(--color-secondary);
 }
 
 .inda-item-text {

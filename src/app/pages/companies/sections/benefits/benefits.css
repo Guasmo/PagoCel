@@ -76,8 +76,8 @@
 }
 
 .comb-card-icon--bolt {
-  -webkit-mask-image: url('/bolt-svgrepo-com.svg');
-  mask-image: url('/bolt-svgrepo-com.svg');
+  -webkit-mask-image: url('/flash-svgrepo-com.svg');
+  mask-image: url('/flash-svgrepo-com.svg');
 }
 
 .comb-card-icon--chart {

@@ -6,16 +6,19 @@
     <a routerLink="/personas" routerLinkActive="active" class="header-link">Personas</a>
     <a routerLink="/empresas" routerLinkActive="active" class="header-link">Empresas</a>
     <a routerLink="/instituciones-financieras" routerLinkActive="active" class="header-link">Instituciones</a>
-    <a routerLink="/que-es-pagocel" routerLinkActive="active" class="header-link header-link--overflow">Qué es PAGOCEL</a>
+    <a routerLink="/que-es-pagocel" routerLinkActive="active" class="header-link header-link--overflow">Qué es
+      PAGOCEL</a>
     <a routerLink="/seguridad" routerLinkActive="active" class="header-link header-link--overflow">Seguridad</a>
-    <a routerLink="/desarrolladores" routerLinkActive="active" class="header-link header-link--overflow">Desarrolladores</a>
+    <a routerLink="/desarrolladores" routerLinkActive="active"
+      class="header-link header-link--overflow">Desarrolladores</a>
 
     <div class="nav-more">
       <button type="button" class="nav-more-trigger" (click)="toggleMore($event)" [class.active]="moreOpen()"
         aria-haspopup="true" [attr.aria-expanded]="moreOpen()">
         Más
         <svg class="nav-more-chevron" [class.open]="moreOpen()" viewBox="0 0 20 20" fill="none">
-          <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+            stroke-linejoin="round" />
         </svg>
       </button>
       <div class="nav-more-dropdown" [class.open]="moreOpen()">
@@ -26,7 +29,7 @@
     </div>
   </nav>
 
-  <button type="button" routerLink="/descargar" class="header-cta">Descargar App</button>
+  <button type="button" routerLink="/descargar" class="pgc-btn-primary">Descargar App</button>
 
   <button class="header-burger" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Abrir menú">
     <span></span><span></span><span></span>
@@ -40,10 +43,12 @@
     <button class="menu-close-btn" (click)="closeMenu()" aria-label="Cerrar menú">&times;</button>
   </div>
   <div class="menu-nav">
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Inicio</a>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+      (click)="closeMenu()">Inicio</a>
     <a routerLink="/personas" routerLinkActive="active" (click)="closeMenu()">Personas</a>
     <a routerLink="/empresas" routerLinkActive="active" (click)="closeMenu()">Empresas</a>
-    <a routerLink="/instituciones-financieras" routerLinkActive="active" (click)="closeMenu()">Instituciones Financieras</a>
+    <a routerLink="/instituciones-financieras" routerLinkActive="active" (click)="closeMenu()">Instituciones
+      Financieras</a>
     <a routerLink="/comercios" routerLinkActive="active" (click)="closeMenu()">Comercios</a>
     <a routerLink="/como-funciona" routerLinkActive="active" (click)="closeMenu()">Cómo Funciona</a>
     <a routerLink="/que-es-pagocel" routerLinkActive="active" (click)="closeMenu()">Qué es PAGOCEL</a>

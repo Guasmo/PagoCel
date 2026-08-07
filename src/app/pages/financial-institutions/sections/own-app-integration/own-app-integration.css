@@ -1,5 +1,5 @@
 .fi-ownapp {
-  background: var(--color-surface-card);
+  background: var(--color-background);
   padding: 6rem 2rem;
   border-top: 1px solid var(--color-disabled);
 }
@@ -75,7 +75,9 @@
 }
 
 @media (max-width: 900px) {
-  .fi-ownapp { padding: 4rem 1.5rem; }
+  .fi-ownapp {
+    padding: 4rem 1.5rem;
+  }
 
   .fio-container {
     grid-template-columns: 1fr;
@@ -93,5 +95,7 @@
 }
 
 @media (max-width: 600px) {
-  .fio-badge img { height: 42px; }
+  .fio-badge img {
+    height: 42px;
+  }
 }

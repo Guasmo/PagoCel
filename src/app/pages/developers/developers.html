@@ -1,7 +1,68 @@
-﻿<main class="page-developers">
+﻿<!-- <main class="page-developers">
   <app-hero></app-hero>
   <app-tech-nav></app-tech-nav>
   <app-public-portal></app-public-portal>
   <app-dev-cta></app-dev-cta>
-</main>
+</main> -->
 
+<section class="maintenance-section" id="contacto">
+  <div class="maintenance-content">
+
+    <div class="brand-lockup" #brand>
+      <img src="/icono.png" alt="" class="brand-mark">
+      <img src="/logo.png" alt="Vitalac" class="brand-word">
+    </div>
+
+    <div class="scene" #scene role="img" aria-label="Ilustración de una computadora en mantenimiento">
+      <svg class="scene-svg" viewBox="0 0 260 190" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Base y cuello del monitor -->
+        <rect x="105" y="122" width="30" height="16" rx="3" class="monitor-neck" />
+        <rect x="75" y="138" width="90" height="9" rx="4.5" class="monitor-base" />
+
+        <!-- Cuerpo del monitor -->
+        <rect x="20" y="10" width="200" height="120" rx="14" class="monitor-frame" />
+
+        <!-- Pantalla -->
+        <rect x="34" y="24" width="172" height="92" rx="6" class="monitor-screen" />
+
+        <!-- Barras de "carga" dentro de la pantalla -->
+        <rect x="50" y="44" class="load-bar bar-1" height="9" rx="4.5" />
+        <rect x="50" y="62" class="load-bar bar-2" height="9" rx="4.5" />
+        <rect x="50" y="80" class="load-bar bar-3" height="9" rx="4.5" />
+
+        <!-- Cursor de terminal parpadeante -->
+        <rect x="50" y="98" width="9" height="11" class="cursor-blink" />
+
+        <!-- Anillo tipo "radar" detrás del engranaje: comunica actividad continua -->
+        <circle cx="196" cy="116" r="16" class="gear-ping" />
+
+        <!-- Engranaje girando, sobre el borde inferior derecho del monitor -->
+        <g class="gear" style="transform-origin: 196px 116px;">
+          <circle cx="196" cy="116" r="16" class="gear-body" />
+          <circle cx="196" cy="116" r="6.5" class="gear-hole" />
+          <g class="gear-teeth">
+            <rect x="192" y="94" width="8" height="9" rx="2" class="gear-body" />
+            <rect x="192" y="129" width="8" height="9" rx="2" class="gear-body" />
+            <rect x="170" y="111.5" width="9" height="8" rx="2" class="gear-body" />
+            <rect x="213" y="111.5" width="9" height="8" rx="2" class="gear-body" />
+            <rect x="178" y="98" width="8.5" height="8.5" rx="2" class="gear-body"
+              transform="rotate(45 182.25 102.25)" />
+            <rect x="205" y="98" width="8.5" height="8.5" rx="2" class="gear-body"
+              transform="rotate(-45 209.25 102.25)" />
+            <rect x="178" y="125.5" width="8.5" height="8.5" rx="2" class="gear-body"
+              transform="rotate(-45 182.25 129.75)" />
+            <rect x="205" y="125.5" width="8.5" height="8.5" rx="2" class="gear-body"
+              transform="rotate(45 209.25 129.75)" />
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <h1 #heading>Seccion en construcción.</h1>
+    <p class="maintenance-copy" #copy>
+      Estamos trabajando en esta sección.<br>
+      Vuelve pronto para descubrirlo.
+    </p>
+  </div>
+</section>

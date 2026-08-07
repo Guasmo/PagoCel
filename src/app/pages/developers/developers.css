@@ -1,2 +1,186 @@
-﻿/* developers page styles -- TODO */
+﻿.maintenance-section {
+    min-height: 100vh;
+    padding: 3rem 1.5rem 4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: #ffffff;
+}
 
+.maintenance-content {
+    width: 100%;
+    max-width: 640px;
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.brand-lockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.brand-mark {
+    height: 88px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.92;
+}
+
+.brand-word {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.92;
+}
+
+.scene {
+    margin: 0 auto 3rem;
+    width: 320px;
+    max-width: 100%;
+    /* GSAP anima opacity/scale/y/rotate/rotateX/rotateY sobre este elemento */
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.scene-svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.monitor-frame {
+    fill: #1d1d1f;
+}
+
+.monitor-neck,
+.monitor-base {
+    fill: #1d1d1f;
+    opacity: 0.85;
+}
+
+.monitor-screen {
+    fill: #ffffff;
+}
+
+.load-bar {
+    fill: var(--color-primary-blue, #3b82f6);
+    animation: bar-grow 3.2s ease-in-out infinite;
+}
+
+.bar-1 {
+    animation-delay: 0s;
+}
+
+.bar-2 {
+    animation-delay: 0.4s;
+    fill: var(--pgc-amber, #f59e0b);
+}
+
+.bar-3 {
+    animation-delay: 0.8s;
+}
+
+.cursor-blink {
+    fill: #c7c7cc;
+    animation: blink 1s steps(1) infinite;
+}
+
+.gear {
+    animation: spin 6s linear infinite;
+}
+
+.gear-body {
+    fill: var(--pgc-amber, #f59e0b);
+}
+
+.gear-hole {
+    fill: #1d1d1f;
+}
+
+/* Anillo tipo radar detrás del engranaje, animado desde maintenance.ts con GSAP */
+.gear-ping {
+    fill: none;
+    stroke: var(--pgc-amber, #f59e0b);
+    stroke-width: 2;
+}
+
+h1 {
+    font-size: 3.4rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #1d1d1f;
+    margin: 0 0 1.1rem;
+}
+
+.maintenance-copy {
+    color: #6e6e73;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bar-grow {
+
+    0%,
+    100% {
+        width: 55px;
+    }
+
+    50% {
+        width: 120px;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .gear,
+    .load-bar,
+    .cursor-blink,
+    .gear-ping {
+        animation: none;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .maintenance-copy {
+        font-size: 1.1rem;
+    }
+
+    .scene {
+        width: 250px;
+    }
+
+    .brand-mark {
+        height: 60px;
+    }
+
+    .brand-word {
+        height: 40px;
+    }
+}

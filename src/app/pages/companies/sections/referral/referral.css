@@ -50,36 +50,6 @@
   margin-top: 0.5rem;
 }
 
-.comr-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.comr-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--color-text-secondary);
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.comr-link:hover {
-  color: var(--color-primary);
-}
-
-.comr-link svg {
-  width: 14px;
-  height: 14px;
-  transition: transform 0.2s ease;
-}
-
-.comr-link:hover svg {
-  transform: translateX(3px);
-}
-
 @media (max-width: 600px) {
   .com-referral {
     padding: 4rem 1.25rem;
@@ -101,11 +71,5 @@
   .comr-actions a {
     width: 100%;
     justify-content: center;
-  }
-
-  .comr-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
   }
 }
